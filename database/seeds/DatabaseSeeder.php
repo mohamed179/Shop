@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call('BooksSeeder');
         $this->call('MobilesSeeder');
         $this->call('UsersSeeder');
+        $this->call('CountriesSeeder');
 
         Model::reguard();
     }
