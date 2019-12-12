@@ -256,8 +256,7 @@ return [
     |
     */
     'gateways' => [
-        'paypal'            =>  BaklySystems\LaravelShopGatewayPaypal\GatewayPayPal::class,
-        'paypalExpress'     =>  BaklySystems\LaravelShopGatewayPaypal\GatewayPayPalExpress::class,
+        'default-gateway'            =>  BaklySystems\LaravelShop\Gateways\GatewayPass::class,
     ],
 
     /*

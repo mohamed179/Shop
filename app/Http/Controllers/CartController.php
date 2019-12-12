@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Country;
+use App\Http\Requests\CheckoutRequest;
 use App\Item;
 use Illuminate\Http\Request;
 
@@ -22,9 +24,18 @@ class CartController extends Controller
         return back();
     }
 
-    public function checkout () {
+    public function checkoutShow () {
         $cart = Cart::current();
-        // TODO: Checkout ...
+        $items = $cart->items;
+        $countries = Country::all();
+        return view('carts.checkout-form')
+            ->withCart($cart)
+            ->withItems($items)
+            ->withCountries($countries);
+    }
+
+    public function checkout (CheckoutRequest $request) {
+        // TODO: checkout and place order ...
         return redirect()->route('home');
     }
 

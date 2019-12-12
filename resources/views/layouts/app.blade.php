@@ -57,16 +57,6 @@
                                     <li>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
-                                                     document.getElementById('checkout-form').submit();">
-                                            <i class="fas fa-shopping-bag"></i> {{ __('Checkout') }}
-                                        </a>
-                                        <form id="checkout-form" action="{{ route('carts.checkout') }}" method="POST">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
                                                      document.getElementById('clear-cart-form').submit();">
                                             <i class="fas fa-trash"></i> {{ __('Clear cart') }}
                                         </a>

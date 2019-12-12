@@ -28,6 +28,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/cart', 'CartController@view')->name('carts.view');
     Route::post('/cart/remove-from-cart/{item}', 'CartController@removeFromCart')->name('carts.remove-from-cart');
+    Route::get('/checkout', 'CartController@checkoutShow')->name('carts.checkout-form');
     Route::post('/checkout', 'CartController@checkout')->name('carts.checkout');
     Route::delete('/clear-cart', 'CartController@clearCart')->name('carts.clear-cart');
 });

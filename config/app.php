@@ -168,6 +168,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         BaklySystems\LaravelShop\LaravelShopProvider::class,
+        Axlon\PostalCodeValidation\ValidationServiceProvider::class,
 
         /*
          * Application Service Providers...
